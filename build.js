@@ -2,6 +2,7 @@
 var metalsmith = require("metalsmith");
 
 var branch = require("metalsmith-branch");
+var copy = require("metalsmith-copy");
 var layouts = require("metalsmith-layouts");
 var markdown = require("metalsmith-markdown");
 
@@ -11,6 +12,12 @@ metalsmith(__dirname)
   // directories
   .source("posts")
   .destination("build")
+
+  // meta files
+  .use(copy({
+    pattern: "meta/*",
+    directory: "/"
+  }))
 
   // markdown
   .use(branch("*.md")
