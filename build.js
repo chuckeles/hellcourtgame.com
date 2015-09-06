@@ -2,7 +2,7 @@
 var metalsmith = require("metalsmith");
 
 var branch = require("metalsmith-branch");
-var copy = require("metalsmith-copy");
+var copy = require("metalsmith-static");
 var layouts = require("metalsmith-layouts");
 var markdown = require("metalsmith-markdown");
 
@@ -15,8 +15,8 @@ metalsmith(__dirname)
 
   // meta files
   .use(copy({
-    pattern: "meta/*",
-    directory: "/"
+    src: "meta",
+    dest: "."
   }))
 
   // markdown
