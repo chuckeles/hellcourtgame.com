@@ -8,7 +8,7 @@ The website is hosted here at Github and using a domain [hellcourtgame.com/](htt
 
 ## License
 
-`posts` directory is Copyright 2015 Martin Chuckeles. You may not reuse anything in there without my permission.
+`posts` directory is Copyright 2015 Chuckeles. You may not reuse anything in there without my permission.
 
 All other directories and files are MIT licensed (see the [LICENSE.md](https://github.com/chuckeles/hellcourtgame.com/blob/master/LICENSE.md) file)
 
