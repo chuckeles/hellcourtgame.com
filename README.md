@@ -16,6 +16,8 @@ All other directories and files are MIT licensed (see the [LICENSE.md](https://g
 
 To build the site, install Metalsmith and run it:
 ```sh
+npm install -g metalsmith
 npm install
+
 metalsmith
 ```
