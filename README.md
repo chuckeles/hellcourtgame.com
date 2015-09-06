@@ -14,10 +14,17 @@ All other directories and files are MIT licensed (see the [LICENSE.md](https://g
 
 ## Building
 
-To build the site, install Metalsmith and run it:
-```sh
-npm install -g metalsmith
-npm install
+To build the site, install dependencies and run `build.js`:
 
-metalsmith
+```sh
+npm install
+node --harmony_generators build.js
+```
+
+## Publishing
+
+Metalsmith builds the website to the `build` folder. In order to push this folder to the `gh-pages` branch, I use this:
+
+```sh
+git subtree push --prefix build origin gh-pages
 ```
