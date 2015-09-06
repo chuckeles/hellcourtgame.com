@@ -1,8 +1,11 @@
 // dependencies
 var metalsmith = require("metalsmith");
 
+var autoprefixer = require("metalsmith-autoprefixer");
 var branch = require("metalsmith-branch");
-var copy = require("metalsmith-static");
+var cleanCss = require("metalsmith-clean-css");
+var concat = require("metalsmith-concat");
+var assets = require("metalsmith-assets");
 var layouts = require("metalsmith-layouts");
 var markdown = require("metalsmith-markdown");
 
@@ -13,19 +16,25 @@ metalsmith(__dirname)
   .source("posts")
   .destination("build")
 
-  // meta files
-  .use(copy({
-    src: "meta",
-    dest: "."
+  // css
+  .use(assets({
+    source: "css",
+    destination: "css"
   }))
+  .use(autoprefixer())
+  .use(concat({
+    files: "**/*.css",
+    output: "css/style.min.css"
+  }))
+  .use(cleanCss())
 
   // markdown
-  .use(branch("*.md")
+  .use(branch("**/*.md")
     .use(markdown())
   )
 
   // handlebars
-  .use(branch("*.html")
+  .use(branch("**/*.html")
     .use(layouts({
       engine: "handlebars",
       partials: "includes",
@@ -33,6 +42,12 @@ metalsmith(__dirname)
       default: "post.html"
     }))
   )
+
+  // meta files
+  .use(assets({
+    source: "meta",
+    destination: "."
+  }))
 
   // build
   .build(function(err){
