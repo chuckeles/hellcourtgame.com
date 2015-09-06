@@ -8,5 +8,8 @@
     "url": "https://github.com/chuckeles/hellcourtgame.com"
   },
   "author": "Chuckeles",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "metalsmith": "^2.0.1"
+  }
 }
