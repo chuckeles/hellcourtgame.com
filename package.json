@@ -10,6 +10,8 @@
   "author": "Chuckeles",
   "license": "MIT",
   "dependencies": {
-    "metalsmith": "^2.0.1"
+    "metalsmith": "^2.0.1",
+    "metalsmith-layouts": "^1.4.0",
+    "swig": "^1.4.2"
   }
 }
