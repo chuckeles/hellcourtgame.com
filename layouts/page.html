@@ -3,16 +3,16 @@
 
 <!-- HEAD -->
 <head>
-  {% include head.html %}
+  {{> head }}
 </head>
 
 <!-- BODY -->
 <body class="site">
   <span id="top"></span>
 
-  {{ content }}
+  {{{ contents }}}
 
-  {% include scripts.html %}
+  {{> scripts }}
 </body>
 
 </html>

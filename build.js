@@ -17,6 +17,16 @@ metalsmith(__dirname)
     .use(markdown())
   )
 
+  // handlebars
+  .use(branch("*.html")
+    .use(layouts({
+      engine: "handlebars",
+      partials: "includes",
+      layouts: "layouts",
+      default: "post.html"
+    }))
+  )
+
   // build
   .build(function(err){
     if (err) throw err;
