@@ -6,6 +6,6 @@ The website is hosted here at Github and using a domain [hellcourtgame.com/](htt
 
 To build the site, install Metalsmith and run it:
 ```sh
-npm install -g metalsmith
+npm install
 metalsmith
 ```
