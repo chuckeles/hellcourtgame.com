@@ -16,6 +16,12 @@ metalsmith(__dirname)
   .source("posts")
   .destination("build")
 
+  // fonts
+  .use(assets({
+    source: "fonts",
+    destination: "fonts"
+  }))
+
   // css
   .use(assets({
     source: "css",
