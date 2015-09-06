@@ -1,0 +1,16 @@
+/* font settings */
+
+@font-face {
+  font-family: "BM Mini";
+
+  src: url("../fonts/bmmini.ttf");
+}
+
+html {
+  font-family: "BM Mini", sans-serif;
+  font-size: 24px;
+  font-smooth: never;
+  line-height: 1.5;
+
+  -webkit-font-smoothing: none;
+}

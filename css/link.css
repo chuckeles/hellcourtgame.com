@@ -1,0 +1,10 @@
+/* link styles */
+
+a {
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+}
