@@ -1,6 +1,0 @@
-{
-  "source": "posts",
-  "destination": "build",
-  "plugins": {}
-  }
-}
