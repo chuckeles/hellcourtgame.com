@@ -1,4 +1,6 @@
 {
   "source": "posts",
-  "destination": "build"
+  "destination": "build",
+  "plugins": {}
+  }
 }
