@@ -10,7 +10,9 @@ var concat       = require("metalsmith-concat");
 var ignore       = require("metalsmith-ignore");
 var layouts      = require("metalsmith-layouts");
 var markdown     = require("metalsmith-markdown");
+var minify       = require("metalsmith-html-minifier");
 var permalinks   = require("metalsmith-permalinks");
+
 
 // setup
 metalsmith(__dirname)
@@ -43,7 +45,7 @@ metalsmith(__dirname)
     smartypants: true
   }))
 
-  // handlebars
+  // html
   .use(layouts({
     engine: "handlebars",
     partials: "includes",
@@ -51,6 +53,7 @@ metalsmith(__dirname)
     pattern: "**/*.html",
     default: "post.html"
   }))
+  .use(minify())
 
   // permalinks
   .use(permalinks({
