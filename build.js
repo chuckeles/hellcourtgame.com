@@ -91,12 +91,12 @@ metalsmith(__dirname)
 
     // permalinks
     .use(permalinks({
-      pattern: "blog/:url"
+      pattern: "blog/:link"
     }))
 
     // collections
     .use(branch(function (name, file) {
-      return file.url;
+      return file.link;
     })
       .use(collections({
         posts: {
@@ -129,8 +129,8 @@ metalsmith(__dirname)
       Object.keys(files).forEach(function (name) {
         var file = files[name];
 
-        // check url
-        if (file.url) {
+        // check link
+        if (file.link) {
           // load content
           var $ = cheerio.load(file.contents.toString());
 
@@ -152,10 +152,10 @@ metalsmith(__dirname)
       Object.keys(files).forEach(function (name) {
         var file = files[name];
 
-        // check url
-        if (file.url) {
+        // check link
+        if (file.link) {
           // set sitemap url
-          file.sitemapUrl = "/blog/" + file.url;
+          file.sitemapUrl = "/blog/" + file.link;
         }
         else {
           // generate by file name

@@ -1,6 +1,6 @@
 ---
 title: The Website is Online
-url: website-is-online
+link: website-is-online
 ---
 
 Today I've finally built and published the Hell Court development blog. This is the first blog post.

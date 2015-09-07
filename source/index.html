@@ -8,11 +8,11 @@ layout: page.html
 
 <main class="site-content">
   <p><a href="http://hellcourtgame.com/rss.xml"><span class="icon">s</span> rss</a></p>
-  
+
   <h3>Blog Posts</h3>
   {{# each posts }}
   <p>
-    <a href="/blog/{{ this.url }}">{{ this.title }}</a>
+    <a href="/blog/{{ this.link }}">{{ this.title }}</a>
   </p>
   {{/ each }}
 </main>
