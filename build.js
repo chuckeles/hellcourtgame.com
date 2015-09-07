@@ -52,6 +52,11 @@ metalsmith(__dirname)
     default: "post.html"
   }))
 
+  // permalinks
+  .use(permalinks({
+    pattern: "blog/:link"
+  }))
+
   // meta files
   .use(assets({
     source: "meta",
