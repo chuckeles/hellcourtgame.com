@@ -6,6 +6,7 @@ var assets       = require("metalsmith-assets");
 var autoprefixer = require("metalsmith-autoprefixer");
 var branch       = require("metalsmith-branch");
 var cleanCss     = require("metalsmith-clean-css");
+var collections  = require("metalsmith-collections");
 var concat       = require("metalsmith-concat");
 var fingerprint  = require("metalsmith-fingerprint");
 var ignore       = require("metalsmith-ignore");
@@ -13,8 +14,6 @@ var layouts      = require("metalsmith-layouts");
 var markdown     = require("metalsmith-markdown");
 var minify       = require("metalsmith-html-minifier");
 var permalinks   = require("metalsmith-permalinks");
-
-
 
 // setup
 metalsmith(__dirname)
@@ -62,12 +61,20 @@ metalsmith(__dirname)
       default: "post.html"
     }))
     .use(minify())
-  )
 
-  // permalinks
-  .use(permalinks({
-    pattern: "blog/:link"
-  }))
+    // permalinks
+    .use(permalinks({
+      pattern: "blog/:link"
+    }))
+
+    // collections
+    .use(collections({
+      posts: {
+        pattern: "blog/**/*",
+        sortBy: "date"
+      }
+    }))
+  )
 
   // meta files
   .use(assets({
