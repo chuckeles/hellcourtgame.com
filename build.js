@@ -13,7 +13,7 @@ var markdown = require("metalsmith-markdown");
 metalsmith(__dirname)
 
   // directories
-  .source("posts")
+  .source("source")
   .destination("build")
 
   // fonts
@@ -35,19 +35,19 @@ metalsmith(__dirname)
   .use(cleanCss())
 
   // markdown
-  .use(branch("**/*.md")
-    .use(markdown())
-  )
+  .use(markdown({
+    gfm: true,
+    smartypants: true
+  }))
 
   // handlebars
-  .use(branch("**/*.html")
-    .use(layouts({
-      engine: "handlebars",
-      partials: "includes",
-      layouts: "layouts",
-      default: "post.html"
-    }))
-  )
+  .use(layouts({
+    engine: "handlebars",
+    partials: "includes",
+    layouts: "layouts",
+    pattern: "**/*.html",
+    default: "post.html"
+  }))
 
   // meta files
   .use(assets({
