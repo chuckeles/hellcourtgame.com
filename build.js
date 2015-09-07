@@ -9,6 +9,7 @@ var cleanCss     = require("metalsmith-clean-css");
 var collections  = require("metalsmith-collections");
 var concat       = require("metalsmith-concat");
 var date         = require("metalsmith-date-in-filename");
+var feed         = require("metalsmith-feed");
 var fingerprint  = require("metalsmith-fingerprint");
 var handlebars   = require("metalsmith-in-place");
 var ignore       = require("metalsmith-ignore");
@@ -24,6 +25,15 @@ metalsmith(__dirname)
   // directories
   .source("source")
   .destination("build")
+
+  // metadata
+  .metadata({
+    site: {
+      title: "Hell Court Development Blog",
+      description: "Development blog for Hell Court",
+      url: "http://hellcourtgame.com"
+    }
+  })
 
   // fonts
   .use(assets({
@@ -134,8 +144,13 @@ metalsmith(__dirname)
 
     // sitemap
     .use(sitemap({
-      hostname: "http://hellcourtgame.com/",
+      hostname: "http://hellcourtgame.com",
       urlProperty: "sitemapUrl"
+    }))
+
+    // feed
+    .use(feed({
+      collection: "posts"
     }))
 
   )

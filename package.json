@@ -19,6 +19,7 @@
     "metalsmith-collections": "^0.7.0",
     "metalsmith-concat": "^3.0.3",
     "metalsmith-date-in-filename": "0.0.14",
+    "metalsmith-feed": "^0.1.0",
     "metalsmith-fingerprint": "^1.0.2",
     "metalsmith-html-minifier": "^1.1.0",
     "metalsmith-ignore": "^0.1.2",
