@@ -16,6 +16,7 @@ var layouts      = require("metalsmith-layouts");
 var markdown     = require("metalsmith-markdown");
 var minify       = require("metalsmith-html-minifier");
 var permalinks   = require("metalsmith-permalinks");
+var sitemap      = require("metalsmith-sitemap");
 
 // setup
 metalsmith(__dirname)
@@ -62,20 +63,16 @@ metalsmith(__dirname)
     // format date
     .use(function (files, metalsmith, done) {
       // iterate files
-      for (var name in files) {
-        if (files.hasOwnProperty(name)) {
-
-          var file = files[name];
-          if (file.date) {
-            // add formatted date
-            file.dateString =
-              file.date.getDate() + ". " +
-              (file.date.getMonth() + 1) + ". " +
-              file.date.getFullYear();
-          }
-
+      Object.keys(files).forEach(function (name) {
+        var file = files[name];
+        if (file.date) {
+          // add formatted date
+          file.dateString =
+            file.date.getDate() + ". " +
+            (file.date.getMonth() + 1) + ". " +
+            file.date.getFullYear();
         }
-      };
+      });
 
       // done
       done();
@@ -110,6 +107,36 @@ metalsmith(__dirname)
 
     // minify
     .use(minify())
+
+    // sitemap url
+    .use(function (files, metalsmith, done) {
+      // iterate files
+      Object.keys(files).forEach(function (name) {
+        var file = files[name];
+
+        // check url
+        if (file.url) {
+          // set sitemap url
+          file.sitemapUrl = "/blog/" + file.url;
+        }
+        else {
+          // generate by file name
+          if (name === "index.html")
+            file.sitemapUrl = "/";
+          else
+            file.sitemapUrl = "/" + name;
+        }
+      });
+
+      // done
+      done();
+    })
+
+    // sitemap
+    .use(sitemap({
+      hostname: "http://hellcourtgame.com/",
+      urlProperty: "sitemapUrl"
+    }))
 
   )
 
