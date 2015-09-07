@@ -1,13 +1,13 @@
 /* font settings */
 
 @font-face {
-  font-family: "BM Mini";
+  font-family: "BitMini";
 
-  src: url("../fonts/bmmini.ttf");
+  src: url("../fonts/bitmini.ttf");
 }
 
 html {
-  font-family: "BM Mini", sans-serif;
+  font-family: "BitMini", sans-serif;
   font-size: 24px;
   font-smooth: never;
   line-height: 1.5;
