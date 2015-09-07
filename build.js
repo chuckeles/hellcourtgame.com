@@ -1,6 +1,7 @@
 // dependencies
 var harmonize  = require("harmonize")(["harmony-generators"]);
 var metalsmith = require("metalsmith");
+var cheerio      = require("cheerio");
 
 var assets       = require("metalsmith-assets");
 var autoprefixer = require("metalsmith-autoprefixer");
@@ -121,6 +122,29 @@ metalsmith(__dirname)
 
     // minify
     .use(minify())
+
+    // excerpts
+    .use(function (files, metalsmith, done) {
+      // iterate files
+      Object.keys(files).forEach(function (name) {
+        var file = files[name];
+
+        // check url
+        if (file.url) {
+          // load content
+          var $ = cheerio.load(file.contents.toString());
+
+          // grab second p
+          var p = $("p")[1];
+
+          // set excerpt
+          file.excerpt = $.html(p).trim();
+        }
+      });
+
+      // done
+      done();
+    })
 
     // sitemap url
     .use(function (files, metalsmith, done) {
