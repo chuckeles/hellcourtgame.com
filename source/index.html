@@ -12,10 +12,8 @@ layout: page.html
   <h3>Blog Posts</h3>
   {{# each posts }}
   <p>
-    {{ this.title }}
+    <a href="/{{ this.link }}">{{ this.title }}</a>
   </p>
-  {{ else }}
-  <p>No posts yet...</p>
   {{/ each }}
 </main>
 
