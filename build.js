@@ -1,13 +1,16 @@
 // dependencies
+var harmonize  = require("harmonize")(["harmony-generators"]);
 var metalsmith = require("metalsmith");
 
+var assets       = require("metalsmith-assets");
 var autoprefixer = require("metalsmith-autoprefixer");
-var branch = require("metalsmith-branch");
-var cleanCss = require("metalsmith-clean-css");
-var concat = require("metalsmith-concat");
-var assets = require("metalsmith-assets");
-var layouts = require("metalsmith-layouts");
-var markdown = require("metalsmith-markdown");
+var branch       = require("metalsmith-branch");
+var cleanCss     = require("metalsmith-clean-css");
+var concat       = require("metalsmith-concat");
+var ignore       = require("metalsmith-ignore");
+var layouts      = require("metalsmith-layouts");
+var markdown     = require("metalsmith-markdown");
+var permalinks   = require("metalsmith-permalinks");
 
 // setup
 metalsmith(__dirname)
@@ -59,5 +62,5 @@ metalsmith(__dirname)
   .build(function(err){
     if (err) throw err;
 
-    console.log("Successfully built the website");
+    console.log("Success");
   });
