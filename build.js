@@ -9,6 +9,7 @@ var cleanCss     = require("metalsmith-clean-css");
 var collections  = require("metalsmith-collections");
 var concat       = require("metalsmith-concat");
 var fingerprint  = require("metalsmith-fingerprint");
+var handlebars   = require("metalsmith-in-place");
 var ignore       = require("metalsmith-ignore");
 var layouts      = require("metalsmith-layouts");
 var markdown     = require("metalsmith-markdown");
@@ -53,14 +54,6 @@ metalsmith(__dirname)
 
   // html
   .use(branch("**/*.html")
-    .use(layouts({
-      engine: "handlebars",
-      partials: "includes",
-      layouts: "layouts",
-      pattern: "**/*.html",
-      default: "post.html"
-    }))
-    .use(minify())
 
     // permalinks
     .use(permalinks({
@@ -70,10 +63,26 @@ metalsmith(__dirname)
     // collections
     .use(collections({
       posts: {
-        pattern: "blog/**/*",
-        sortBy: "date"
+        pattern: "**/*.html",
+        sortBy: "date",
+        reverse: true
       }
     }))
+
+    // handlebars
+    .use(handlebars({
+      engine: "handlebars",
+      partials: "includes"
+    }))
+    .use(layouts({
+      engine: "handlebars",
+      partials: "includes",
+      layouts: "layouts",
+      pattern: "**/*.html",
+      default: "post.html"
+    }))
+    .use(minify())
+
   )
 
   // meta files
