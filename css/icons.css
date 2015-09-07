@@ -6,8 +6,8 @@
   font-family: "BitMiniIcons";
 
   src: url("../fonts/bitminiicons.svg"),
-  url("../fonts/bitminiicons.ttf"),
-  url("../fonts/bitminiicons.eot");
+  url("../fonts/bitminiicons.eot"),
+  url("../fonts/bitminiicons.ttf");
 }
 
 

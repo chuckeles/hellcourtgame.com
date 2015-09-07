@@ -1,62 +1,32 @@
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-<metadata>
+  <metadata>
+    
 Created by FontForge 20150318 at Mon Sep  7 11:07:23 2015
  By uniteet7
 Copyright chuckeles 2015
-</metadata>
-<defs>
-<font id="BitMiniIcons" horiz-adv-x="768" >
-  <font-face 
-    font-family="BitMiniIcons"
-    font-weight="400"
-    font-stretch="normal"
-    units-per-em="1024"
-    panose-1="0 0 4 0 0 0 0 0 0 0"
-    ascent="819"
-    descent="-205"
-    x-height="768"
-    bbox="0 0 896 768"
-    underline-thickness="51"
-    underline-position="127"
-    unicode-range="U+0020-0077"
-  />
-<missing-glyph horiz-adv-x="256" 
-d="M320 90v102h-102v-102h102zM421 209v102h-203v-102h203zM320 328v102h-102v-102h102zM421 447v101h-101q-43 0 -72 -29q-30 -31 -30 -72h203zM0 0v640h640v-640h-640z" />
-    <glyph glyph-name=".notdef" horiz-adv-x="256" 
-d="M320 90v102h-102v-102h102zM421 209v102h-203v-102h203zM320 328v102h-102v-102h102zM421 447v101h-101q-43 0 -72 -29q-30 -31 -30 -72h203zM0 0v640h640v-640h-640z" />
-    <glyph glyph-name="glyph1" horiz-adv-x="0" 
- />
-    <glyph glyph-name="glyph2" horiz-adv-x="256" 
- />
-    <glyph glyph-name="space" unicode=" " horiz-adv-x="256" 
- />
-    <glyph glyph-name="c" unicode="c" horiz-adv-x="1024" 
-d="M256 0v128h128v-128h-128zM128 128v128h128v-128h-128zM640 128v128h128v-128h-128zM0 256v128h128v-128h-128zM768 256v128h128v-128h-128zM128 384v128h128v-128h-128zM384 128v384h128v-384h-128zM640 384v128h128v-128h-128zM512 512v128h128v-128h-128z" />
-    <glyph glyph-name="d" unicode="d" 
-d="M0 256v128h128v-128h-128zM512 256v128h128v-128h-128zM256 0v128h-128v128h128v512h128v-512h128v-128h-128v-128h-128z" />
-    <glyph glyph-name="e" unicode="e" horiz-adv-x="640" 
-d="M256 0v128h128v-128h-128zM128 128v128h-128v128h128v128h128v-128h256v-128h-256v-128h-128zM256 512v128h128v-128h-128z" />
-    <glyph glyph-name="f" unicode="f" 
-d="M512 128v256h-256v256h-128v-512h384zM0 0v768h384v-128h128v-128h128v-512h-640z" />
-    <glyph glyph-name="h" unicode="h" 
-d="M256 128v128h-128v128h-128v128h128v128h128v-128h128v128h128v-128h128v-128h-128v-128h-128v-128h-128z" />
-    <glyph glyph-name="i" unicode="i" 
-d="M0 0v512h512v-128h-256v-128h-128v-128h128v128h128v-128h128v256h128v-384h-640z" />
-    <glyph glyph-name="l" unicode="l" 
-d="M256 256v128h128v-128h-128zM0 0v512h128v-384h384v-128h-512zM512 256v128h-128v128h-128v128h384v-384h-128z" />
-    <glyph glyph-name="o" unicode="o" 
-d="M0 0v512h128v128h128v128h128v-128h128v-128h128v-512h-640z" />
-    <glyph glyph-name="p" unicode="p" 
-d="M0 0v384h128v128h256v-128h-128v-128h128v128h128v128h128v-512h-640z" />
-    <glyph glyph-name="r" unicode="r" horiz-adv-x="640" 
-d="M128 0v128h128v-128h-128zM256 128v128h-256v128h256v128h128v-128h128v-128h-128v-128h-128zM128 512v128h128v-128h-128z" />
-    <glyph glyph-name="t" unicode="t" horiz-adv-x="896" 
-d="M0 0v128h128v128h128v128h-128v128h-128v128h256v-128h128v256h256v-128h128v-128h-128v-256h-128v-128h-256v-128h-256z" />
-    <glyph glyph-name="u" unicode="u" 
-d="M0 384v128h128v-128h-128zM512 384v128h128v-128h-128zM256 0v512h-128v128h128v128h128v-128h128v-128h-128v-512h-128z" />
-    <glyph glyph-name="w" unicode="w" 
-d="M0 512v128h128v-128h-128zM512 512v128h128v-128h-128zM0 0v256h256v128h-128v128h128v256h128v-256h128v-128h-128v-128h256v-256h-640z" />
-  </font>
-</defs></svg>
+
+  </metadata>
+  <defs>
+    <font id="BitMiniIcons" horiz-adv-x="768">
+      <font-face font-family="BitMiniIcons" font-weight="400" font-stretch="normal" units-per-em="1024" panose-1="0" ascent="819" descent="-205" x-height="768" bbox="0" underline-thickness="51" underline-position="127" unicode-range="U+0020-0077"/>
+      <missing-glyph horiz-adv-x="256" d="M320 90v102h-102v-102h102zM421 209v102h-203v-102h203zM320 328v102h-102v-102h102zM421 447v101h-101q-43 0 -72 -29q-30 -31 -30 -72h203zM0 0v640h640v-640h-640z"/>
+      <glyph glyph-name=".notdef" horiz-adv-x="256" d="M320 90v102h-102v-102h102zM421 209v102h-203v-102h203zM320 328v102h-102v-102h102zM421 447v101h-101q-43 0 -72 -29q-30 -31 -30 -72h203zM0 0v640h640v-640h-640z"/>
+      <glyph glyph-name="glyph1" horiz-adv-x="0"/>
+      <glyph glyph-name="glyph2" horiz-adv-x="256"/>
+      <glyph glyph-name="space" unicode=" " horiz-adv-x="256"/>
+      <glyph glyph-name="c" unicode="c" horiz-adv-x="1024" d="M256 0v128h128v-128h-128zM128 128v128h128v-128h-128zM640 128v128h128v-128h-128zM0 256v128h128v-128h-128zM768 256v128h128v-128h-128zM128 384v128h128v-128h-128zM384 128v384h128v-384h-128zM640 384v128h128v-128h-128zM512 512v128h128v-128h-128z"/>
+      <glyph glyph-name="d" unicode="d" d="M0 256v128h128v-128h-128zM512 256v128h128v-128h-128zM256 0v128h-128v128h128v512h128v-512h128v-128h-128v-128h-128z"/>
+      <glyph glyph-name="e" unicode="e" horiz-adv-x="640" d="M256 0v128h128v-128h-128zM128 128v128h-128v128h128v128h128v-128h256v-128h-256v-128h-128zM256 512v128h128v-128h-128z"/>
+      <glyph glyph-name="f" unicode="f" d="M512 128v256h-256v256h-128v-512h384zM0 0v768h384v-128h128v-128h128v-512h-640z"/>
+      <glyph glyph-name="h" unicode="h" d="M256 128v128h-128v128h-128v128h128v128h128v-128h128v128h128v-128h128v-128h-128v-128h-128v-128h-128z"/>
+      <glyph glyph-name="i" unicode="i" d="M0 0v512h512v-128h-256v-128h-128v-128h128v128h128v-128h128v256h128v-384h-640z"/>
+      <glyph glyph-name="l" unicode="l" d="M256 256v128h128v-128h-128zM0 0v512h128v-384h384v-128h-512zM512 256v128h-128v128h-128v128h384v-384h-128z"/>
+      <glyph glyph-name="o" unicode="o" d="M0 0v512h128v128h128v128h128v-128h128v-128h128v-512h-640z"/>
+      <glyph glyph-name="p" unicode="p" d="M0 0v384h128v128h256v-128h-128v-128h128v128h128v128h128v-512h-640z"/>
+      <glyph glyph-name="r" unicode="r" horiz-adv-x="640" d="M128 0v128h128v-128h-128zM256 128v128h-256v128h256v128h128v-128h128v-128h-128v-128h-128zM128 512v128h128v-128h-128z"/>
+      <glyph glyph-name="t" unicode="t" horiz-adv-x="896" d="M0 0v128h128v128h128v128h-128v128h-128v128h256v-128h128v256h256v-128h128v-128h-128v-256h-128v-128h-256v-128h-256z"/>
+      <glyph glyph-name="u" unicode="u" d="M0 384v128h128v-128h-128zM512 384v128h128v-128h-128zM256 0v512h-128v128h128v128h128v-128h128v-128h-128v-512h-128z"/>
+      <glyph glyph-name="w" unicode="w" d="M0 512v128h128v-128h-128zM512 512v128h128v-128h-128zM0 0v256h256v128h-128v128h128v256h128v-256h128v-128h-128v-128h256v-256h-640z"/>
+    </font>
+  </defs>
+</svg>
