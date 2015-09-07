@@ -94,13 +94,17 @@ metalsmith(__dirname)
     }))
 
     // collections
-    .use(collections({
-      posts: {
-        pattern: "**/*.html",
-        sortBy: "date",
-        reverse: true
-      }
-    }))
+    .use(branch(function (name, file) {
+      return file.url;
+    })
+      .use(collections({
+        posts: {
+          pattern: "**/*.html",
+          sortBy: "date",
+          reverse: true
+        }
+      }))
+    )
 
     // handlebars
     .use(handlebars({
