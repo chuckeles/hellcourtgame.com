@@ -8,6 +8,7 @@ var branch       = require("metalsmith-branch");
 var cleanCss     = require("metalsmith-clean-css");
 var collections  = require("metalsmith-collections");
 var concat       = require("metalsmith-concat");
+var date         = require("metalsmith-date-in-filename");
 var fingerprint  = require("metalsmith-fingerprint");
 var handlebars   = require("metalsmith-in-place");
 var ignore       = require("metalsmith-ignore");
@@ -55,6 +56,9 @@ metalsmith(__dirname)
   // html
   .use(branch("**/*.html")
 
+    // date
+    .use(date(true))
+
     // permalinks
     .use(permalinks({
       pattern: "blog/:link"
@@ -81,6 +85,8 @@ metalsmith(__dirname)
       pattern: "**/*.html",
       default: "post.html"
     }))
+
+    // minify
     .use(minify())
 
   )
