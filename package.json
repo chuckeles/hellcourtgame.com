@@ -17,6 +17,6 @@
     "metalsmith-clean-css": "^2.0.0",
     "metalsmith-concat": "^3.0.3",
     "metalsmith-layouts": "^1.4.0",
-    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-markdown": "^0.2.1"
   }
 }
