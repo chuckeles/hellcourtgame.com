@@ -1,10 +1,13 @@
-/* font settings */
+/**
+ * font settings
+ */
 
 @font-face {
   font-family: "BitMini";
 
   src: url("../fonts/bitmini.ttf");
 }
+
 
 html {
   font-family: "BitMini", sans-serif;
