@@ -18,7 +18,7 @@ To build the site, install dependencies and run `build.js`:
 
 ```sh
 npm install
-node --harmony_generators build.js
+node build.js
 ```
 
 ## Publishing
