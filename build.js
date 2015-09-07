@@ -59,6 +59,28 @@ metalsmith(__dirname)
     // date
     .use(date(true))
 
+    // format date
+    .use(function (files, metalsmith, done) {
+      // iterate files
+      for (var name in files) {
+        if (files.hasOwnProperty(name)) {
+
+          var file = files[name];
+          if (file.date) {
+            // add formatted date
+            file.dateString =
+              file.date.getDate() + ". " +
+              (file.date.getMonth() + 1) + ". " +
+              file.date.getFullYear();
+          }
+
+        }
+      };
+
+      // done
+      done();
+    })
+
     // permalinks
     .use(permalinks({
       pattern: "blog/:link"
