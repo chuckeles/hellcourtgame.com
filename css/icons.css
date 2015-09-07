@@ -1,0 +1,16 @@
+/**
+ * icons font settings
+ */
+
+@font-face {
+  font-family: "BitMiniIcons";
+
+  src: url("../fonts/bitminiicons.svg"),
+  url("../fonts/bitminiicons.ttf"),
+  url("../fonts/bitminiicons.eot");
+}
+
+
+.icon {
+  font-family: "BitMiniIcons";
+}
