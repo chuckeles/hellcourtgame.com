@@ -83,7 +83,7 @@ metalsmith(__dirname)
 
     // permalinks
     .use(permalinks({
-      pattern: "blog/:link"
+      pattern: "blog/:url"
     }))
 
     // collections
