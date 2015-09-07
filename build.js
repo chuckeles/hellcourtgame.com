@@ -89,6 +89,29 @@ metalsmith(__dirname)
       done();
     })
 
+    // excerpts
+    .use(function (files, metalsmith, done) {
+      // iterate files
+      Object.keys(files).forEach(function (name) {
+        var file = files[name];
+
+        // check link
+        if (file.link) {
+          // load content
+          var $ = cheerio.load(file.contents.toString());
+
+          // grab frist p
+          var p = $("p")[0];
+
+          // set excerpt
+          file.excerpt = $.html(p).trim();
+        }
+      });
+
+      // done
+      done();
+    })
+
     // permalinks
     .use(permalinks({
       pattern: "blog/:link"
@@ -122,29 +145,6 @@ metalsmith(__dirname)
 
     // minify
     .use(minify())
-
-    // excerpts
-    .use(function (files, metalsmith, done) {
-      // iterate files
-      Object.keys(files).forEach(function (name) {
-        var file = files[name];
-
-        // check link
-        if (file.link) {
-          // load content
-          var $ = cheerio.load(file.contents.toString());
-
-          // grab second p
-          var p = $("p")[1];
-
-          // set excerpt
-          file.excerpt = $.html(p).trim();
-        }
-      });
-
-      // done
-      done();
-    })
 
     // sitemap url
     .use(function (files, metalsmith, done) {
