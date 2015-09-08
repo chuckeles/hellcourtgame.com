@@ -112,35 +112,6 @@ metalsmith(__dirname)
       done();
     })
 
-    // external links
-    .use(function (files, metalsmith, done) {
-      // iterate files
-      Object.keys(files).forEach(function (name) {
-        var file = files[name];
-
-        // check link
-        if (file.link) {
-          // load content
-          var $ = cheerio.load(file.contents.toString());
-
-          // find links
-          var links = $("a[href^=http]");
-
-          // iterate
-          links.each(function () {
-            // add link
-            $(this).prepend("<span class='icon'>l</span> ");
-          });
-
-          // update contents
-          file.contents = $.html();
-        }
-      });
-
-      // done
-      done();
-    })
-
     // permalinks
     .use(permalinks({
       pattern: "blog/:link"
@@ -171,6 +142,35 @@ metalsmith(__dirname)
       pattern: "**/*.html",
       default: "post.html"
     }))
+
+    // external links
+    .use(function (files, metalsmith, done) {
+      // iterate files
+      Object.keys(files).forEach(function (name) {
+        var file = files[name];
+
+        // check link
+        if (file.link) {
+          // load content
+          var $ = cheerio.load(file.contents.toString());
+
+          // find links
+          var links = $("a[href^=http]", ".site-content");
+
+          // iterate
+          links.each(function () {
+            // add link
+            $(this).prepend("<span class='icon'>l</span> ");
+          });
+
+          // update contents
+          file.contents = $.html();
+        }
+      });
+
+      // done
+      done();
+    })
 
     // minify
     .use(minify())
