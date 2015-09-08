@@ -5,23 +5,27 @@ analytics.load("Gs6HF6uyHUvpi8Uh2jeEUFlj8GPUwzxc");
 }}();
 </script>
 
-<!-- TRACK -->
+<!-- TRACKing -->
 <script>
-  // information
-  var title = document.title;
-  var category = "Page";
-
-  // set up with template
-  {{# if title }}
-    title = "{{ title }}";
-  {{/ if }}
+  // track page views
   {{# if link }}
-    category = "Post";
+    // send post page
+    analytics.page("Posts", "{{ title }}", { title: "{{ title }}" });
+  {{ else }}
+    // send page
+    analytics.page("{{ title }}", { title: "{{ title }}" });
   {{/ if }}
 
-  // send page
-  analytics.page(title, {
-    title: title,
-    category: category
-  });
+  // track link clicks
+  var rssLink = document.getElementById("rss-link");
+  var twitterLink = document.getElementById("twitter-link");
+  var sourceLink = document.getElementById("source-link");
+
+  // hook up
+  if (rssLink)
+    analytics.trackLink(rssLink, "Clicked RSS Link");
+  if (twitterLink)
+    analytics.trackLink(twitterLink, "Clicked Twitter Link");
+  if (sourceLink)
+    analytics.trackLink(sourceLink, "Clicked Source Link");
 </script>
