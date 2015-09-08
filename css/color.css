@@ -10,3 +10,8 @@ html {
 a {
   color: #f01f18;
 }
+
+em,
+strong {
+  color: #f08b18;
+}
