@@ -2,6 +2,8 @@
 
 ## Status
 
+[![Code Climate](https://img.shields.io/codeclimate/github/chuckeles/hellcourtgame.com.svg?style=flat-square)](https://codeclimate.com/github/chuckeles/hellcourtgame.com)
+
 [![GitHub Release](https://img.shields.io/github/release/chuckeles/hellcourtgame.com.svg?style=flat-square)](https://github.com/chuckeles/hellcourtgame.com/releases/latest)
 [![GitHub Issues](https://img.shields.io/github/issues/chuckeles/hellcourtgame.com.svg?style=flat-square)](https://github.com/chuckeles/hellcourtgame.com/issues)
 
@@ -23,7 +25,7 @@ To build the site, install dependencies and run `build.js`:
 
 ```sh
 npm install
-node build.js
+node build
 ```
 
 ## Publishing
