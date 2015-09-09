@@ -9,9 +9,11 @@
 
 ## Information
 
-This is a development blog for Hell Court. The website is currently *under construction*.
+This is a development blog for Hell Court.
 
 The website is hosted here at Github and using a domain [hellcourtgame.com](http://hellcourtgame.com/). It is using [Metalsmith](http://www.metalsmith.io/) generator to build the site.
+
+More information is in these blog posts: [Website is Online](http://hellcourtgame.com/blog/website-is-online/) and [About Hell Court](http://hellcourtgame.com/blog/about-hell-court/).
 
 ## License
 
