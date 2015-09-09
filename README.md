@@ -1,5 +1,10 @@
 # Hell Court Website
 
+## Status
+
+[![GitHub Release](https://img.shields.io/github/release/chuckeles/hellcourtgame.com.svg?style=flat-square)](https://github.com/chuckeles/hellcourtgame.com/releases/latest)
+[![GitHub Issues](https://img.shields.io/github/issues/chuckeles/hellcourtgame.com.svg?style=flat-square)](https://github.com/chuckeles/hellcourtgame.com/issues)
+
 ## Information
 
 This is a development blog for Hell Court. The website is currently *under construction*.
