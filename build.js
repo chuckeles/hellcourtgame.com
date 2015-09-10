@@ -48,6 +48,12 @@ metalsmith(__dirname)
     destination: "icons"
   }))
 
+  // images
+  .use(assets({
+    source: "source/images",
+    destination: "images"
+  }))
+
   // css
   .use(assets({
     source: "css",
