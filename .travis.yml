@@ -20,6 +20,12 @@ script: node build
 
 # deployement
 after_success:
+
+  # configure
+  - git config --global user.name "Travis CI"
   - git config credential.helper "store --file=.git/credentials"
   - echo "https://${GITHUB}:@github.com" > .git/credentials
+  - git remote add origin "https://github.com/chuckeles/hellcourtgame.com.git"
+
+  # deploy to github
   - git subtree push --prefix build origin gh-pages
