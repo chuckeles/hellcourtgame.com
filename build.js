@@ -18,6 +18,7 @@ var layouts      = require("metalsmith-layouts");
 var markdown     = require("metalsmith-markdown");
 var minify       = require("metalsmith-html-minifier");
 var permalinks   = require("metalsmith-permalinks");
+var prism        = require("metalsmith-prism");
 var sitemap      = require("metalsmith-sitemap");
 
 // setup
@@ -74,11 +75,15 @@ metalsmith(__dirname)
   // markdown
   .use(markdown({
     gfm: true,
-    smartypants: true
+    smartypants: true,
+    langPrefix: "language-"
   }))
 
   // html
   .use(branch("**/*.html")
+
+    // prism
+    .use(prism())
 
     // date
     .use(date(true))

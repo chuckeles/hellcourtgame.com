@@ -12,3 +12,11 @@ I made a class that all of my scripts will inherit from instead of the Unity's `
 ### Object Pool
 
 ![Object Pool Code](/images/object-pool-code.png)
+
+```csharp
+// comment
+public class TestingCode {
+  public int number = 1;
+  private string str = "hello world";
+}
+```
