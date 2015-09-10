@@ -28,4 +28,5 @@ after_success:
 
   # deploy to github
   - git subtree split --prefix build --branch gh-pages
+  - git pull origin gh-pages:gh-pages
   - git push origin gh-pages:gh-pages
