@@ -2,6 +2,7 @@
 
 ## Status
 
+[![Travis](https://img.shields.io/travis/chuckeles/hellcourtgame.com.svg?style=flat-square)](https://travis-ci.org/chuckeles/hellcourtgame.com)
 [![Code Climate](https://img.shields.io/codeclimate/github/chuckeles/hellcourtgame.com.svg?style=flat-square)](https://codeclimate.com/github/chuckeles/hellcourtgame.com)
 [![VersionEye](https://img.shields.io/versioneye/d/user/projects/55f07d031e87ad001400044e.svg?style=flat-square)](https://www.versioneye.com/user/projects/55f07d031e87ad001400044e)
 [![GitHub Release](https://img.shields.io/github/release/chuckeles/hellcourtgame.com.svg?style=flat-square)](https://github.com/chuckeles/hellcourtgame.com/releases/latest)
