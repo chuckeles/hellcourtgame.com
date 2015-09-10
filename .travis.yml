@@ -37,7 +37,7 @@ before_script:
 after_success:
 
   # commit
-  - git add .
+  - git add --all .
   - git commit -m "New Travis CI build"
 
   # push
