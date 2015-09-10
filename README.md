@@ -18,7 +18,7 @@ More information is in these blog posts: [Website is Online](http://hellcourtgam
 
 ## License
 
-`source/posts` directory is Copyright 2015 Chuckeles. You may not reuse anything in there without my permission.
+The directories in `source` directory and their contents are Copyright 2015 Chuckeles. You may not reuse anything in there without my permission.
 
 All other directories and files are MIT licensed (see the [LICENSE.md file](https://github.com/chuckeles/hellcourtgame.com/blob/master/LICENSE.md)).
 
