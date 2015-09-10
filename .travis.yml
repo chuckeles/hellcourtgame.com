@@ -15,22 +15,29 @@ env:
   global:
     secure: eECJ08G2kx2gOfTM9+DHCveVZ81PXkhWaity0RHpO4Qjkb96l/MuTJ85isHB5eWf5kHiTgxYePeKjXx2IocrBFnkcMZpURfIhxp2ZtYzM4HXGTrQ/J5ixyRfVXpk3U6BDWn36Fa3U56K0PgCC1fMVDJgAM1INs4sevz2IBJVf/pBj8j71vKtD34lRVjMI10TX2ijhnw6zEF3oiJoHtltN3kSjpU/IhlMX8eaY8TLcSEpQlmKb1Zz2dEth59I2JQGBoeBT2Y/lrwyJKdxuVS3As9MeDcxzNKbJsTbHRjs68GoJT/AsWYYa6Gpc4RA0jtQT+BqJr6sAGOYAO+yOo4kpbQwNsJLDl/GNjhW36+BzXHo/TdiRQ4DJOPc9g1Zaecwk+SGWS6EiTzfEZ3+nUMpo/kE4dDuhFIL/IPDOS7Uon7wWcTwfOsXs1Ib0fJnvDP7SBPVmXoix3po8QR9UrkJZoghjbx91LqAu5g7b6Qu0oVozwLSvcXR+8odHr9YhBWPs+mJm4DjzQrm3omLm/JWo+hErqLjt5gqbRVtlLxOTWzeEhsP4ZY+Vr666bZb2ra8+87FhCV0+BEG/5Cah82cxy10VmZSF0rUGBjVJfV9zXgo2Ovekf3ymLghX2H9Qb9499w/GSIu7km0qBGDWsnKbbVICLuGks4ApFGLo6c1mYc=
 
-# scripts
+# standard scripts
 install: npm install
 script: node build
 
-# deployement
-after_success:
+# preparation before main script
+before_script:
 
-  # configure
+  # configure git
   - git config --global user.email "travis-ci@mailinator.com"
   - git config --global user.name "Travis CI"
   - git config credential.helper "store --file=.git/credentials"
   - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
 
-  # deploy to github
-  - git subtree split --prefix build --branch build
-  - git pull origin gh-pages:gh-pages
-  - git checkout gh-pages
-  - git merge --no-ff build
-  - git push origin gh-pages:gh-pages
+  # add subtree
+  - git subtree add --prefix build origin gh-pages
+
+# deployement
+after_success:
+
+  # commit
+  - git add .
+  - git commit -m "New Travis CI build"
+
+  # push
+  - git push origin master
+  - git subtree push --prefix build origin gh-pages
