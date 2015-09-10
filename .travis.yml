@@ -29,7 +29,8 @@ before_script:
   - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
 
   # add subtree
-  - git subtree add --prefix build origin gh-pages
+  - git fetch origin
+  - git subtree add --prefix build origin/gh-pages
 
 # deployement
 after_success:
