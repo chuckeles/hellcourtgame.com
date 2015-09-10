@@ -1,0 +1,22 @@
+# language
+language: node_js
+
+# node versions
+node_js:
+  - "0.12"
+
+# branches
+branches:
+  only:
+    - master
+
+# variables
+env:
+  secure: "aFbYKnq6wcsfR4TpU1vCSiLeYCIRit0SrRfr/q2gfreBobnbMbqc+KwideyrEEjYAG8SSiNGUK0lOcZpHnIL6J+hNyWMdwoColQ5A6id6egpu7ELpOsjgyXqH2GB9IpDQ3TzltNroOrrXcgDzu4vtLX/DCAB+NXw0lw1TTpTB6/xbbaHlbuEuXGfyN9eF+yE6ITl+KW11wlu8dGskUAIGE4DrNTOGR0e6LvTU17clhLO7t76dliPwmTa9opc7RmhPcdn9R8gSyoK7x7g2K9qf4u25BKHXpHOlod18IDYA8zHQxIH1M/iS2X+4gqf1EUIsr0C5tJx1uuQpOSi9abjYT+jFXguqSkOzebHSOai5mNQhgjHv9TSRN77BP5RhZh8I94Q9Iuj/CZwD33quj0uQ2c8Oo3ct/5xTY2547QpbvGCbNyvywbCP/uMr48SpexavjFdriswWPOQH9L49wnl2lmptPDR+uHa7Vs1JZ/cPZCR6PBEvrVPSzjD4RjtuvfOQKUDGfTQt/pbIpOglYdzC+o7cHU5a39DuFo2vwLFa4GiDqjaI/ICZU3AVPOcs98GAevnP1CvKe+P1oqirE6n0QHUGAVcboAO1qDQG3n7AfDn18rgQjWwEzOu7WW241Kw1K9WEnRlJHB66ygGbwlwoHOL+CBooLvPJ1sT2KUu/gY="
+
+# scripts
+install: npm install
+script: node build
+
+# deployement
+after_success: echo "Ready to deploy!"
