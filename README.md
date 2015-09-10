@@ -22,6 +22,10 @@ More information is in these blog posts: [Website is Online](http://hellcourtgam
 
 All other directories and files are MIT licensed (see the [LICENSE.md](https://github.com/chuckeles/hellcourtgame.com/blob/master/LICENSE.md) file)
 
+## Travis
+
+Travis CI is building and deploying the build website using commands from below. See [.travis.yml file](https://github.com/chuckeles/hellcourtgame.com/blob/master/.travis.yml) for more information.
+
 ## Building
 
 To build the site, install dependencies and run `build.js`:
