@@ -112,11 +112,15 @@ metalsmith(__dirname)
           // load content
           var $ = cheerio.load(file.contents.toString());
 
-          // grab frist p
+          // grab first p
           var p = $("p")[0];
+          // grab first img
+          var img = $("img");
+          if (img)
+            img = img[0];
 
           // set excerpt
-          file.excerpt = $.html(p).trim();
+          file.excerpt = $.html(img).trim() + $.html(p).trim();
         }
       });
 
