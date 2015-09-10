@@ -12,7 +12,8 @@ branches:
 
 # variables
 env:
-  secure: "aFbYKnq6wcsfR4TpU1vCSiLeYCIRit0SrRfr/q2gfreBobnbMbqc+KwideyrEEjYAG8SSiNGUK0lOcZpHnIL6J+hNyWMdwoColQ5A6id6egpu7ELpOsjgyXqH2GB9IpDQ3TzltNroOrrXcgDzu4vtLX/DCAB+NXw0lw1TTpTB6/xbbaHlbuEuXGfyN9eF+yE6ITl+KW11wlu8dGskUAIGE4DrNTOGR0e6LvTU17clhLO7t76dliPwmTa9opc7RmhPcdn9R8gSyoK7x7g2K9qf4u25BKHXpHOlod18IDYA8zHQxIH1M/iS2X+4gqf1EUIsr0C5tJx1uuQpOSi9abjYT+jFXguqSkOzebHSOai5mNQhgjHv9TSRN77BP5RhZh8I94Q9Iuj/CZwD33quj0uQ2c8Oo3ct/5xTY2547QpbvGCbNyvywbCP/uMr48SpexavjFdriswWPOQH9L49wnl2lmptPDR+uHa7Vs1JZ/cPZCR6PBEvrVPSzjD4RjtuvfOQKUDGfTQt/pbIpOglYdzC+o7cHU5a39DuFo2vwLFa4GiDqjaI/ICZU3AVPOcs98GAevnP1CvKe+P1oqirE6n0QHUGAVcboAO1qDQG3n7AfDn18rgQjWwEzOu7WW241Kw1K9WEnRlJHB66ygGbwlwoHOL+CBooLvPJ1sT2KUu/gY="
+  global:
+    secure: IA4sLshYz/EVZevKlLOQXyfZHgkCZJC6Tnz22Wt6rCJ8QhfCYOY8kla5ZnBKz2Tah/8qGLp2fPSZey0qAYLg0Buz2CxZmUJ5GQeEAnhePnDYr5UHkmZPYhKiabOsexqQsjDcUwRZ4tN6TZ/XY0aVyyQWOaJ+zqoF25WzKTC+h3a2MQYTWsH1VSfPojR3Glb/aqqjQTQtpFuchp4bftXoVmge5zHjo3kJ4ZH2O7lipg6bOMGmOwvZPSYn01hxduR9svL0cEKWgB3oUmC8PgaP0e5szLCq4shjRFMjyJcO+lEbQIoUa2Np1aKUddfFS/7nOBBnDVKJ3eOhbMIeQn7FMRpGG6hHigT/lsYSMvN7Y/0o/JulCWdRlSK45xbIJcJYK/EAxbqJPUCw4/ZyUbzCK1XZamwQZVeQPrb9f9AmSj6dFWLjlYi/h/k/qwRih3P2kmEueZYbkk5XjiarXQYKAuop2fp56y1sAybBwA714b0rwRDsRhHbr4d40lTq39uNh7HY2A66YVu6qGkgS5F1j8ImelLGlCrHjth5xmx/x/o9q37KhTuiNKxTKxSecr9yvmSCloSLkLNb/9vb+ORWgBSGmIe7nXyzxW8Dqdp2Mj4wnw9zShSq61t56pwKBAugSubhjiZ9tTQ3aCOmt8dLe2twCVFKSs//qnZVZu9NhD0=
 
 # scripts
 install: npm install
@@ -22,10 +23,9 @@ script: node build
 after_success:
 
   # configure
-  - git config --global user.name "Travis CI"
-  - git config credential.helper "store --file=.git/credentials"
-  - echo "https://${GITHUB}:@github.com" > .git/credentials
-  - git remote add origin "https://github.com/chuckeles/hellcourtgame.com.git"
+  - git config --global user.name "${GIT_NAME}"
+  - git config --global user.email "${GIT_EMAIL}"
+  - git remote add github "https://${GH_TOKEN}@github.com/chuckeles/hellcourtgame.com.git"
 
   # deploy to github
-  - git subtree push --prefix build origin gh-pages
+  - git subtree push --prefix build github gh-pages
