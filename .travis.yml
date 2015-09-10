@@ -27,4 +27,4 @@ after_success:
   - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
 
   # deploy to github
-  - git subtree push --prefix build origin gh-pages
+  - git push origin `git subtree split --prefix build gh-pages`:gh-pages --force
