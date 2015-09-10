@@ -19,4 +19,7 @@ install: npm install
 script: node build
 
 # deployement
-after_success: echo "Ready to deploy! Edit this to do that..."
+after_success:
+  - git config credential.helper "store --file=.git/credentials"
+  - echo "https://${GITHUB}:@github.com" > .git/credentials
+  - git subtree push --prefix build origin gh-pages
