@@ -19,4 +19,4 @@ install: npm install
 script: node build
 
 # deployement
-after_success: echo "Ready to deploy!"
+after_success: echo "Ready to deploy! Edit this to do that..."
