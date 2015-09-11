@@ -125,7 +125,7 @@ metalsmith(__dirname)
             img = img[0];
 
           // set excerpt
-          file.excerpt = img ? $.html(img).trim() : "" + $.html(p).trim();
+          file.excerpt = (img ? $.html(img).trim() : "") + $.html(p).trim();
         }
       });
 
