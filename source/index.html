@@ -10,10 +10,12 @@ layout: page.html
 <main class="site-content">
   <h3>Blog Posts</h3>
   {{# each posts }}
-    <h4>
-      <a href="/blog/{{ this.link }}">{{ this.title }}</a>
-    </h4>
-    {{{ this.excerpt }}}
+    <div class="excerpt">
+      <h4>
+        <a href="/blog/{{ this.link }}">{{ this.title }}</a>
+      </h4>
+      {{{ this.excerpt }}}
+    </div>
   {{/ each }}
 </main>
 
