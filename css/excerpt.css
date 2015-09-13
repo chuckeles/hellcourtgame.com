@@ -5,8 +5,8 @@
 .excerpt img {
   float: left;
 
-  max-width: 30%;
-  margin-right: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .excerpt::after {
@@ -14,4 +14,16 @@
   clear: both;
 
   content: "";
+}
+
+@media (min-width: 700px) {
+  .excerpt img {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .excerpt img {
+    max-width: 30%;
+  }
 }
