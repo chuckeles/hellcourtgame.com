@@ -8,6 +8,8 @@ layout: page.html
 </header>
 
 <main class="site-content">
+  {{> menu }}
+
   <h3>Blog Posts</h3>
   {{# each posts }}
     <div class="excerpt">
@@ -20,21 +22,5 @@ layout: page.html
 </main>
 
 <footer class="site-footer">
-  <p>
-    <a href="http://hellcourtgame.com/rss.xml" id="rss-link">
-      <span class="icon">s</span> RSS
-    </a>
-    &middot;
-    <a href="https://twitter.com/9chuckeles9" id="twitter-link">
-      <span class="icon">t</span> Twitter
-    </a>
-    &middot;
-    <a href="https://github.com/chuckeles/hellcourtgame.com" id="source-link">
-      <span class="icon">c</span> Source
-    </a>
-    &middot;
-    <a href="#top">
-      <span class="icon">u</span> Top
-    </a>
-  </p>
+  {{> menu }}
 </footer>
