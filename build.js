@@ -1,7 +1,7 @@
 // dependencies
 var harmonize  = require("harmonize")(["harmony-generators"]);
 var metalsmith = require("metalsmith");
-var cheerio      = require("cheerio");
+var cheerio    = require("cheerio");
 
 var assets       = require("metalsmith-assets");
 var autoprefixer = require("metalsmith-autoprefixer");
